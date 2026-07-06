@@ -1,8 +1,7 @@
 extends Node
 
 
-#region sounds
-#var sound name = sound file path
+#region SFX
 const ALIEN_SHOT = preload("uid://dr5ir4lfjdqd2")
 const BOWSTRING = preload("uid://c55fd37uqiqsn")
 const BREAK = preload("uid://d2h8ww57jdtj7")
@@ -30,6 +29,15 @@ const TIMES_UP = preload("uid://c8iwxm1gfs1tl")
 const TURRET_OPENING = preload("uid://d4hdbr8pro440")
 const VENT_OPEN_OR_MISS = preload("uid://0hvce6i6cwpk")
 const WELD = preload("uid://c8e8uf5722ws1")
+
+#endregion
+
+#region Music
+const FIGHT_LEVEL_1 = preload("uid://blaruh2nbomr8")
+const FIGHT_LEVEL_2 = preload("uid://l2d1u0boaqy2")
+const FIGHT_LEVEL_3 = preload("uid://bovpyuyw8bvlx")
+const SAND_TEST = preload("uid://brj5ayxdyglrf")
+
 #endregion
 
 
@@ -37,7 +45,7 @@ const WELD = preload("uid://c8e8uf5722ws1")
 ##
 ##Create a [AudioStreamPlayer2D] as a child of the [param node] and starts playing [param sound]. Then deletes the [AudioStreamPlayer2D] when the audio is done playing.
 ##To play sound at position set node to root and [param offset] to desired position.
-func play_2d(sound:AudioStream, audio_bus:String, node:Node, volume:float = 0, offset:Vector2 = Vector2.ZERO):
+func play_2d(audio_bus:String, node:Node, sound:AudioStream = DEFAULT_1, volume:float = 0, offset:Vector2 = Vector2.ZERO):
 	var player:AudioStreamPlayer2D = AudioStreamPlayer2D.new()
 	player.set_stream(sound)
 	player.set_bus(audio_bus)
@@ -50,7 +58,7 @@ func play_2d(sound:AudioStream, audio_bus:String, node:Node, volume:float = 0, o
 
 
 ##Plays the given sound globaly
-func play_global(sound:AudioStream, audio_bus:String, volume:float = 0):
+func play_global(audio_bus:String, sound:AudioStream = DEFAULT_1, volume:float = 0):
 	var player:AudioStreamPlayer = AudioStreamPlayer.new()
 	player.set_stream(sound)
 	player.set_bus(audio_bus)
