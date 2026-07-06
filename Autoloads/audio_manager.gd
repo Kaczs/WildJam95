@@ -3,6 +3,34 @@ extends Node
 
 #region sounds
 #var sound name = sound file path
+const ALIEN_SHOT = preload("uid://dr5ir4lfjdqd2")
+const BASS = preload("uid://07uhwbmxn4ys")
+const BOWSTRING = preload("uid://c55fd37uqiqsn")
+const BREAK = preload("uid://d2h8ww57jdtj7")
+const CARD_DECLINE = preload("uid://y18g1y1sycbm")
+const DEFAULT_1 = preload("uid://ctx8gt2tdfbdw")
+const DIG = preload("uid://be4egr8cu5byq")
+const DODGE = preload("uid://dkvwh6mkxdpj7")
+const DOOR_OPEN = preload("uid://c5swqpt5ea4a3")
+const FIRE_BREATH = preload("uid://k42f3nu3td6u")
+const GUARD = preload("uid://cpp7e24740j5n")
+const GUNSHOT = preload("uid://bgdhr3el1e611")
+const HEAL = preload("uid://h0iwjgw503ij")
+const HIT = preload("uid://kil02tdo8fiu")
+const INVALID = preload("uid://u6faxelwkudd")
+const LOAD_GUN = preload("uid://dgrvcwxl0ibif")
+const OBJECTIVE_COMPLETE = preload("uid://bbkjkylggath")
+const PICKUP = preload("uid://d3w5br7t4dq5q")
+const PLAYER_HIT = preload("uid://12xyp1tjk4c3")
+const SC_FI_WOOSH = preload("uid://ctrv5cnvq5rew")
+const SQUISHY_HIT = preload("uid://cen18igm3v55w")
+const STEP = preload("uid://dtif2j1d2yv82")
+const SWORD = preload("uid://bkcab2wt1vn2n")
+const TERMINAL_BEEP = preload("uid://bcekf4ifundy1")
+const TIMES_UP = preload("uid://c8iwxm1gfs1tl")
+const TURRET_OPENING = preload("uid://d4hdbr8pro440")
+const VENT_OPEN_OR_MISS = preload("uid://0hvce6i6cwpk")
+const WELD = preload("uid://c8e8uf5722ws1")
 #endregion
 
 
