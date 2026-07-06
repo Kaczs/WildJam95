@@ -4,7 +4,6 @@ extends Node
 #region sounds
 #var sound name = sound file path
 const ALIEN_SHOT = preload("uid://dr5ir4lfjdqd2")
-const BASS = preload("uid://07uhwbmxn4ys")
 const BOWSTRING = preload("uid://c55fd37uqiqsn")
 const BREAK = preload("uid://d2h8ww57jdtj7")
 const CARD_DECLINE = preload("uid://y18g1y1sycbm")
