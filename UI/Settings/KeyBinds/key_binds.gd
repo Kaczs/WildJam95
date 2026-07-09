@@ -1,10 +1,12 @@
 extends Control
 
+##disables the event buttons allowing only one key top be rebound at a time
 signal disable_key_rebinding(diable_button:bool)#this is conected to the event buttons to diable them when 
 
 var rebindable_actions:Dictionary = {
 	#name of action in project settings : name you want to be displayed to the user, 
 	#"crouch_action":"Crouch"
+	"ui_back":"Back",
 }
 
 

@@ -8,14 +8,15 @@ var current_scene:Control
 
 ##Dict that stores witch nodes show be shown when Input UI_Back is pressed.
 ##The key is the current node and the value is the node to show.
-var scene_back:Dictionary = {
-	"MainMenu":main_menu,
-	"Settings":main_menu,
-}
+var scene_back:Dictionary
 
 
 func _ready() -> void:
 	current_scene = main_menu
+	scene_back = {
+	"MainMenu":main_menu,
+	"Settings":main_menu,
+	}
 
 
 func _input(event: InputEvent) -> void:
