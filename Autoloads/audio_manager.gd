@@ -41,7 +41,7 @@ const SAND_TEST = preload("uid://brj5ayxdyglrf")
 #endregion
 
 
-##Plays [param sound] at the given [param node].
+##Plays [param sound] from [param node].
 ##
 ##Create a [AudioStreamPlayer2D] as a child of the [param node] and starts playing [param sound]. Then deletes the [AudioStreamPlayer2D] when the audio is done playing.
 ##To play sound at position set node to root and [param offset] to desired position.

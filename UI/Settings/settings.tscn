@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d4m7rbp05e81j"]
+
+[ext_resource type="PackedScene" uid="uid://e6q06jshe80m" path="res://UI/Settings/KeyBinds/key_binds.tscn" id="1_cdu2u"]
+[ext_resource type="PackedScene" uid="uid://dlveotugasnjn" path="res://UI/Settings/Audio/audio.tscn" id="2_qeycx"]
+
+[node name="Settings" type="TabContainer" unique_id=1794996779]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+tab_0/title = "Key Binds"
+
+[node name="KeyBinds" parent="." unique_id=1967009364 instance=ExtResource("1_cdu2u")]
+layout_mode = 2
+metadata/_tab_index = 0
+metadata/_tab_name = "Key Binds"
+
+[node name="Audio" parent="." unique_id=1076582695 instance=ExtResource("2_qeycx")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1

@@ -40,7 +40,6 @@ text = "Exit"
 
 [node name="Settings" parent="CenterContainer" unique_id=1794996779 instance=ExtResource("2_tk8dj")]
 visible = false
-custom_minimum_size = Vector2(1000, 500)
 layout_mode = 2
 
 [connection signal="pressed" from="CenterContainer/MainMenu/Play" to="." method="_on_play_pressed"]
