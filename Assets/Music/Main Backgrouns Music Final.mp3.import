@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://pfnb8h2co6jl"
+path="res://.godot/imported/Main Backgrouns Music Final.mp3-09d33ca7ed81c6b54107ab70bdfb3fb1.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Main Backgrouns Music Final.mp3"
+dest_files=["res://.godot/imported/Main Backgrouns Music Final.mp3-09d33ca7ed81c6b54107ab70bdfb3fb1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
