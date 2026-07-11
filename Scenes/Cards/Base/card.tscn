@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://duy0gepl1ba80"]
+
+[ext_resource type="Script" uid="uid://fro75mjkbka0" path="res://Scenes/Cards/Base/card.gd" id="1_ac5pp"]
+[ext_resource type="Texture2D" uid="uid://dln3nech7jpsw" path="res://Scenes/Cards/Base/Scroll.png" id="1_g0nif"]
+[ext_resource type="Texture2D" uid="uid://cwfqnj2jdmvpi" path="res://Assets/icon.svg" id="2_ac5pp"]
+
+[node name="Card" type="Control" unique_id=415577316]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1036.0
+offset_bottom = -468.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ac5pp")
+
+[node name="CardBack" type="TextureRect" parent="." unique_id=189582523]
+layout_mode = 0
+offset_right = 116.0
+offset_bottom = 174.0
+texture = ExtResource("1_g0nif")
+
+[node name="Icon" type="TextureRect" parent="." unique_id=660287212]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 33.0
+offset_right = 153.0
+offset_bottom = 161.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ac5pp")
+
+[node name="Description" type="RichTextLabel" parent="." unique_id=151982243]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 99.0
+offset_right = 109.0
+offset_bottom = 176.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 16
+text = "Text Goes here"
+
+[node name="Name" type="RichTextLabel" parent="." unique_id=910606815]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 5.0
+offset_right = 109.0
+offset_bottom = 29.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 16
+text = "Name Here"
+
+[node name="Button" type="Button" parent="." unique_id=783884433]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 117.0
+offset_bottom = 175.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

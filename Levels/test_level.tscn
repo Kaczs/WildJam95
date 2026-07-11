@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bf8xxm2kshek5"]
+
+[ext_resource type="PackedScene" uid="uid://duy0gepl1ba80" path="res://Scenes/Cards/Base/card.tscn" id="1_ormqy"]
+[ext_resource type="Texture2D" uid="uid://b1xyg2korx4vk" path="res://Scenes/Enemy/SlimePortrait.png" id="2_00vsl"]
+
+[node name="TestLevel" type="Node2D" unique_id=510700135]
+
+[node name="Hand" type="HBoxContainer" parent="." unique_id=886221892]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 192.0
+offset_top = 464.0
+offset_right = 926.0
+offset_bottom = 649.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 130
+
+[node name="Card" parent="Hand" unique_id=415577316 instance=ExtResource("1_ormqy")]
+layout_mode = 2
+
+[node name="Card2" parent="Hand" unique_id=23694565 instance=ExtResource("1_ormqy")]
+layout_mode = 2
+
+[node name="Card3" parent="Hand" unique_id=147433238 instance=ExtResource("1_ormqy")]
+layout_mode = 2
+
+[node name="Card4" parent="Hand" unique_id=1300232214 instance=ExtResource("1_ormqy")]
+layout_mode = 2
+
+[node name="Badguy" type="Control" parent="." unique_id=1634881578]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 516.0
+offset_top = 18.0
+offset_right = 556.0
+offset_bottom = 58.0
+
+[node name="Health" type="RichTextLabel" parent="Badguy" unique_id=1699085778]
+layout_mode = 0
+offset_left = -43.0
+offset_top = 106.0
+offset_right = 84.0
+offset_bottom = 151.0
+theme_override_font_sizes/normal_font_size = 32
+text = "100/100"
+
+[node name="Intent" type="RichTextLabel" parent="Badguy" unique_id=2078960492]
+layout_mode = 0
+offset_left = -73.0
+offset_top = 165.0
+offset_right = 112.0
+offset_bottom = 264.0
+theme_override_font_sizes/normal_font_size = 32
+text = "Intent: Attack 30
+"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Badguy" unique_id=757031959]
+layout_mode = 0
+offset_left = -41.0
+offset_top = -17.0
+offset_right = 81.0
+offset_bottom = 105.0
+texture = ExtResource("2_00vsl")
