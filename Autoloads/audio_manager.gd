@@ -48,20 +48,20 @@ const MAIN_BACKGROUNS_MUSIC_FINAL = preload("uid://pfnb8h2co6jl")
 #endregion
 
 
+var music_player:AudioStreamPlayer
+const MUSIC_LIST:AudioStreamInteractive = preload("uid://drciincy6eujv")
+var music_playback:AudioStreamPlaybackInteractive
+
 func _ready() -> void:
-	play_music() 
+	music_player = AudioStreamPlayer.new()
+	self.add_child(music_player)
+	music_player.set_stream(MUSIC_LIST)
+	music_player.play()
+	music_playback = music_player.get_stream_playback()
 
 
-##IS ONLY TESTING AUDIO RIGHT NOW.
-##Only one song should be played at a time. If a new song is started,
-##the old song should first be faded out then we can start the new song.
-func play_music():
-	var player:AudioStreamPlayer = AudioStreamPlayer.new()
-	player.set_autoplay(true)
-	player.set_bus("Music")
-	player.set_stream(BACKGROUND_MUSIC_MAIN)
-	player.set_volume_db(-20)
-	self.add_child(player)
+func play_song(index:int):
+	music_playback.switch_to_clip(index)
 
 
 ##Plays [param sound] from [param node].
@@ -90,3 +90,8 @@ func play_global(audio_bus:String, sound:AudioStream = DEFAULT_1, volume:float =
 	#deletes the audio player when sound is done playing
 	player.connect("finished",func():player.queue_free())
 	self.add_child(player)
+
+
+#func _input(event: InputEvent) -> void:
+	#if event.is_action_pressed("ui_copy"):
+		#play_song(music_playback.get_current_clip_index() + 1)
