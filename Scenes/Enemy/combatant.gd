@@ -29,5 +29,9 @@ func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 
 
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
-	CombatManager.play_card(data,self)
-	AudioManager.play_global("SFX",AudioManager.HIT,-12)
+	if data.is_plant_mode:
+		CombatManager.plant_card(data, CombatManager.current_stage, CombatManager.current_turn, self.name)
+		AudioManager.play_global("WELD",AudioManager.HIT,-12)
+	else:
+		CombatManager.play_card(data,self)
+		AudioManager.play_global("SFX",AudioManager.HIT,-12)

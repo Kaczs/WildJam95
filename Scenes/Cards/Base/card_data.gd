@@ -6,3 +6,4 @@ extends Resource
 ## Effects are commands that control what the card can do
 ## deal damage, apply effect, block etc.
 @export var effects:Array[CardEffect]
+var is_plant_mode:bool = false

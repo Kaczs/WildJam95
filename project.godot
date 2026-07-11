@@ -24,6 +24,10 @@ AudioManager="*uid://bnk625kc32avr"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+enemies=""
+
 [input]
 
 ui_back={

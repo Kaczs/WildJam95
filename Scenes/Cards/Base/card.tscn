@@ -23,6 +23,18 @@ offset_right = 116.0
 offset_bottom = 174.0
 texture = ExtResource("1_g0nif")
 
+[node name="Outline" type="TextureRect" parent="." unique_id=2135409353]
+visible = false
+modulate = Color(0.65809906, 0.65809894, 5.7756904e-07, 1)
+show_behind_parent = true
+layout_mode = 0
+offset_left = -13.0
+offset_top = -14.0
+offset_right = 103.0
+offset_bottom = 160.0
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_g0nif")
+
 [node name="Icon" type="TextureRect" parent="." unique_id=660287212]
 layout_mode = 0
 offset_left = 25.0

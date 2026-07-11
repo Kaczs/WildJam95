@@ -1,6 +1,6 @@
 class_name BlockEffect
 extends CardEffect
-@export var damage_amount:int
+@export var block_amount:int
 
 func doEffect(context:CombatContext):
-	context.give_block(context.target, damage_amount)
+	context.give_block(context.target, block_amount)

@@ -28,7 +28,7 @@ layout_mode = 2
 layout_mode = 2
 data = ExtResource("2_i4ak4")
 
-[node name="Badguy" type="Control" parent="." unique_id=1634881578 groups=["test_badguy"]]
+[node name="Badguy" type="Control" parent="." unique_id=1634881578 groups=["enemies"]]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 791.0
@@ -65,7 +65,7 @@ offset_right = 81.0
 offset_bottom = 105.0
 texture = ExtResource("2_00vsl")
 
-[node name="Badguy2" type="Control" parent="." unique_id=2089300749 groups=["test_badguy"]]
+[node name="Badguy2" type="Control" parent="." unique_id=2089300749 groups=["enemies"]]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 299.0

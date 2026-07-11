@@ -2,20 +2,15 @@
 
 [ext_resource type="Script" uid="uid://bhrx3oqupoeh7" path="res://Resources/CardEffects/card_effect.gd" id="1_ggcp4"]
 [ext_resource type="Script" uid="uid://1beqopmi4iiq" path="res://Scenes/Cards/Base/card_data.gd" id="2_44njd"]
-[ext_resource type="Script" uid="uid://ddafxlm8ucuh0" path="res://Resources/CardEffects/damage_effect.gd" id="2_xnws5"]
+[ext_resource type="Script" uid="uid://dmp4mtst2nlru" path="res://Resources/CardEffects/block_effect.gd" id="2_xnws5"]
 
-[sub_resource type="Resource" id="Resource_xnws5"]
+[sub_resource type="Resource" id="Resource_44njd"]
 script = ExtResource("2_xnws5")
 damage_amount = 5
-metadata/_custom_type_script = "uid://ddafxlm8ucuh0"
-
-[sub_resource type="Resource" id="Resource_bybmk"]
-script = ExtResource("2_xnws5")
-damage_amount = 5
-metadata/_custom_type_script = "uid://ddafxlm8ucuh0"
+metadata/_custom_type_script = "uid://dmp4mtst2nlru"
 
 [resource]
 script = ExtResource("2_44njd")
-card_name = "Fuck Blocking"
-effects = Array[ExtResource("1_ggcp4")]([SubResource("Resource_xnws5"), SubResource("Resource_bybmk")])
+card_name = "Block"
+effects = Array[ExtResource("1_ggcp4")]([SubResource("Resource_44njd")])
 metadata/_custom_type_script = "uid://1beqopmi4iiq"

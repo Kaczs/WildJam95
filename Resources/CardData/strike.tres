@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_dvxcm"]
 script = ExtResource("2_dvxcm")
-damage_amount = 100
+damage_amount = 5
 metadata/_custom_type_script = "uid://ddafxlm8ucuh0"
 
 [resource]
