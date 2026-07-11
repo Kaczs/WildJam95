@@ -2,11 +2,6 @@ class_name Combatant
 extends Control
 
 @export var max_health:int = 100
-## If we want to "plant" a card targetting this enemy the next time we're here
-## we can't just reference the node since it'll get freed. Just increment by one
-## for each enemy.
-@export var spawn_slot = 0
-
 var current_health:int
 var block:int # The amount of damage to be blocked
 
@@ -29,7 +24,7 @@ func gain_block(amount:int):
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 	if data is CardData:
 		return true
-	else:
+	else:	
 		return false
 
 

@@ -16,7 +16,10 @@ func _ready() -> void:
 
 
 func _on_button_pressed() -> void:
-	CombatManager.play_card(data, test_enemy)
+	print("Right mouse pressed")
+	# Eventually players should be able to plant in previous turns but that'll need some UI
+	# for now this just does the current one.
+	CombatManager.plant_card(data, CombatManager.current_stage, CombatManager.current_turn, self.name)
 	self.queue_free()
 
 

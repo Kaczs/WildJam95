@@ -54,9 +54,11 @@ text = "Name Here"
 
 [node name="Button" type="Button" parent="." unique_id=783884433]
 modulate = Color(1, 1, 1, 0)
+z_index = -1
 layout_mode = 0
 offset_right = 117.0
 offset_bottom = 175.0
-mouse_behavior_recursive = 1
+mouse_filter = 1
+button_mask = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -17,11 +17,8 @@ func play_card(card:CardData, target:Combatant, was_planted:bool = false):
 
 # Since cards functionally speaking are just an array of effects, we can store
 # that array in our dictionary key'd by stage and turn.
-func plant_card(card_data:CardData, target_stage:int, target_turn:int, target_slot:int):
+func plant_card(card_data:CardData, target_stage:int, target_turn:int, target_name:String):
 	# Check if we've used our max plants for the fight here
-	# Check if within bounds
-	if target_stage == current_stage and target_turn < current_turn:
-		return
 	# Create a key for the stage if it's not there
 	if not planted_cards.has(target_stage):
 		planted_cards[target_stage] = {}
@@ -30,10 +27,10 @@ func plant_card(card_data:CardData, target_stage:int, target_turn:int, target_sl
 		# Create an empty list which we'll fill with the cards we wanna play on this turn
 		planted_cards[target_stage][target_turn] = []
 	# Store it, might look something like 1:2:[card:fawfwafw, slot:2]
-	# so stage 1, turn 2, fire this card at slot 2
+	# so stage 1, turn 2, fire this card at this target
 	planted_cards[target_stage][target_turn].append({
 		"card":card_data.duplicate(true), 
-		"slot":target_slot
+		"target":target_name
 		})
 	
 
@@ -41,8 +38,12 @@ func plant_card(card_data:CardData, target_stage:int, target_turn:int, target_sl
 func get_enemies():
 	pass
 
+
 func start_of_turn():
+	# Do we have any planted cards to play?
+	#var p_card = planted_cards[]
 	pass
+
 
 func new_loop():
 	current_turn = 0
