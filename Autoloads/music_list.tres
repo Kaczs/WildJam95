@@ -1,0 +1,23 @@
+[gd_resource type="AudioStreamInteractive" format=3 uid="uid://drciincy6eujv"]
+
+[ext_resource type="AudioStream" uid="uid://pfnb8h2co6jl" path="res://Assets/Music/Main Backgrouns Music Final.mp3" id="2_bgcb4"]
+[ext_resource type="AudioStream" uid="uid://brj5ayxdyglrf" path="res://Assets/Music/sand_test.mp3" id="3_0yuev"]
+
+[resource]
+clip_count = 2
+clip_0/name = &"Main Backgrouns Music Final"
+clip_0/stream = ExtResource("2_bgcb4")
+clip_0/auto_advance = 1
+clip_0/next_clip = 0
+clip_1/name = &"Sand Test"
+clip_1/stream = ExtResource("3_0yuev")
+clip_1/auto_advance = 1
+clip_1/next_clip = 0
+_transitions = {
+Vector2i(-1, -1): {
+"fade_beats": 10.0,
+"fade_mode": 3,
+"from_time": 0,
+"to_time": 1
+}
+}

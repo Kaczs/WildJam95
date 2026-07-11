@@ -28,6 +28,7 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	#ordering matters here if we set_modulate before set_drag_preview then the drag preview will be greyed out
 	set_drag_preview(self.duplicate())
 	self.set_modulate(Color.DARK_GRAY)
+	AudioManager.play_global("SFX",AudioManager.SELECT_CARD)
 	
 	return data
 

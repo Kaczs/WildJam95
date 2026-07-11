@@ -17,6 +17,7 @@ config/icon="res://Assets/icon.svg"
 [autoload]
 
 CombatManager="*uid://cvggmbtpyb74n"
+AudioManager="*uid://bnk625kc32avr"
 
 [display]
 

@@ -5,6 +5,8 @@ extends Node
 const ALIEN_SHOT = preload("uid://dr5ir4lfjdqd2")
 const BOWSTRING = preload("uid://c55fd37uqiqsn")
 const BREAK = preload("uid://d2h8ww57jdtj7")
+const BUTTON_DOWN = preload("uid://ca0u046e5wtvr")
+const BUTTON_RELEASE = preload("uid://bms0wuwgrrkj5")
 const CARD_DECLINE = preload("uid://y18g1y1sycbm")
 const DEFAULT_1 = preload("uid://ctx8gt2tdfbdw")
 const DIG = preload("uid://be4egr8cu5byq")
@@ -19,8 +21,10 @@ const INVALID = preload("uid://u6faxelwkudd")
 const LOAD_GUN = preload("uid://dgrvcwxl0ibif")
 const OBJECTIVE_COMPLETE = preload("uid://bbkjkylggath")
 const PICKUP = preload("uid://d3w5br7t4dq5q")
+const PLACE_CARD = preload("uid://bd5iuanywvr0x")
 const PLAYER_HIT = preload("uid://12xyp1tjk4c3")
 const SC_FI_WOOSH = preload("uid://ctrv5cnvq5rew")
+const SELECT_CARD = preload("uid://csjhe03ek7ree")
 const SQUISHY_HIT = preload("uid://cen18igm3v55w")
 const STEP = preload("uid://dtif2j1d2yv82")
 const SWORD = preload("uid://bkcab2wt1vn2n")
@@ -37,8 +41,27 @@ const FIGHT_LEVEL_1 = preload("uid://blaruh2nbomr8")
 const FIGHT_LEVEL_2 = preload("uid://l2d1u0boaqy2")
 const FIGHT_LEVEL_3 = preload("uid://bovpyuyw8bvlx")
 const SAND_TEST = preload("uid://brj5ayxdyglrf")
+const BACKGROUND_MUSIC_MAIN = preload("uid://cd4n78gkfr7g2")
+const BOSS_SONG = preload("uid://dknd2se2tda8l")
+const MAIN_BACKGROUNS_MUSIC_FINAL = preload("uid://pfnb8h2co6jl")
 
 #endregion
+
+
+var music_player:AudioStreamPlayer
+const MUSIC_LIST:AudioStreamInteractive = preload("uid://drciincy6eujv")
+var music_playback:AudioStreamPlaybackInteractive
+
+func _ready() -> void:
+	music_player = AudioStreamPlayer.new()
+	self.add_child(music_player)
+	music_player.set_stream(MUSIC_LIST)
+	music_player.play()
+	music_playback = music_player.get_stream_playback()
+
+
+func play_song(index:int):
+	music_playback.switch_to_clip(index)
 
 
 ##Plays [param sound] from [param node].
@@ -52,7 +75,7 @@ func play_2d(audio_bus:String, node:Node, sound:AudioStream = DEFAULT_1, volume:
 	player.set_autoplay(true)
 	player.set_volume_db(volume)
 	#deletes the audio player when sound is done playing
-	player.connect("finished",func():self.queue_free())
+	player.connect("finished",func():player.queue_free())
 	player.set_position(offset)
 	node.add_child(player)
 
@@ -65,5 +88,10 @@ func play_global(audio_bus:String, sound:AudioStream = DEFAULT_1, volume:float =
 	player.set_autoplay(true)
 	player.set_volume_db(volume)
 	#deletes the audio player when sound is done playing
-	player.connect("finished",func():self.queue_free())
+	player.connect("finished",func():player.queue_free())
 	self.add_child(player)
+
+
+#func _input(event: InputEvent) -> void:
+	#if event.is_action_pressed("ui_copy"):
+		#play_song(music_playback.get_current_clip_index() + 1)
