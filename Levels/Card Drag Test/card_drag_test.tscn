@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://dfregdv4xy3m6"]
+
+[ext_resource type="Script" uid="uid://bexecu6n4b76c" path="res://Levels/Card Drag Test/card.gd" id="1_4c7x3"]
+[ext_resource type="Script" uid="uid://bqtiei6dq2koh" path="res://Levels/Card Drag Test/enemy.gd" id="1_qrsnt"]
+[ext_resource type="Texture2D" uid="uid://b1xyg2korx4vk" path="res://Scenes/Enemy/SlimePortrait.png" id="2_1up05"]
+[ext_resource type="Texture2D" uid="uid://dln3nech7jpsw" path="res://Scenes/Cards/Base/Scroll.png" id="2_jp3q2"]
+[ext_resource type="Texture2D" uid="uid://cwfqnj2jdmvpi" path="res://Assets/icon.svg" id="3_1nhk3"]
+
+[node name="CardDragTest" type="Control" unique_id=1013053626]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card" type="Control" parent="." unique_id=280568706]
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 452.0
+offset_right = 149.0
+offset_bottom = 631.0
+script = ExtResource("1_4c7x3")
+
+[node name="CardBack" type="TextureRect" parent="Card" unique_id=1369653955]
+layout_mode = 0
+offset_right = 116.0
+offset_bottom = 174.0
+mouse_behavior_recursive = 1
+texture = ExtResource("2_jp3q2")
+
+[node name="Icon" type="TextureRect" parent="Card" unique_id=2123138852]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 33.0
+offset_right = 153.0
+offset_bottom = 161.0
+scale = Vector2(0.5, 0.5)
+mouse_behavior_recursive = 1
+texture = ExtResource("3_1nhk3")
+
+[node name="Description" type="RichTextLabel" parent="Card" unique_id=144304323]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 99.0
+offset_right = 109.0
+offset_bottom = 176.0
+mouse_behavior_recursive = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 16
+text = "Text Goes here"
+
+[node name="Name" type="RichTextLabel" parent="Card" unique_id=1828029315]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 5.0
+offset_right = 109.0
+offset_bottom = 29.0
+mouse_behavior_recursive = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 16
+text = "Name Here"
+
+[node name="Hand" type="Control" parent="." unique_id=1292277187]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Enemy" type="Control" parent="." unique_id=362198636]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.0
+offset_top = -242.0
+offset_right = -248.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qrsnt")
+
+[node name="SlimePortrait" type="Sprite2D" parent="Enemy" unique_id=1460440657]
+position = Vector2(100, 100)
+scale = Vector2(10, 10)
+texture = ExtResource("2_1up05")
+
+[node name="Enemy2" type="Control" parent="." unique_id=1255319233]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -219.0
+offset_right = 130.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qrsnt")
+
+[node name="SlimePortrait" type="Sprite2D" parent="Enemy2" unique_id=1543105080]
+position = Vector2(100, 100)
+scale = Vector2(10, 10)
+texture = ExtResource("2_1up05")
+
+[node name="Enemy3" type="Control" parent="." unique_id=2124003002]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 263.0
+offset_top = -239.0
+offset_right = 463.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qrsnt")
+
+[node name="SlimePortrait" type="Sprite2D" parent="Enemy3" unique_id=1080103205]
+position = Vector2(100, 100)
+scale = Vector2(10, 10)
+texture = ExtResource("2_1up05")
