@@ -92,6 +92,6 @@ func play_global(audio_bus:String, sound:AudioStream = DEFAULT_1, volume:float =
 	self.add_child(player)
 
 
-#func _input(event: InputEvent) -> void:
-	#if event.is_action_pressed("ui_copy"):
-		#play_song(music_playback.get_current_clip_index() + 1)
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_copy"):
+		play_song(music_playback.get_current_clip_index() + 1)

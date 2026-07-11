@@ -9,6 +9,7 @@ var target:Combatant
 var was_planted:bool
 var turn:int = 0
 
+
 # Will need for setting up cards in the past
 func _init(given_target:Combatant, given_turn:int, given_was_planted:bool = false ) -> void:
 	target = given_target
@@ -19,3 +20,8 @@ func deal_damage(given_target:Combatant, amount:int):
 	if given_target == null or given_target.current_health <= 0:
 		return # Dead or doesnt exist
 	given_target.take_damage(amount)
+
+func give_block(given_target:Combatant, amount:int):
+	if given_target == null:
+		return
+	given_target.gain_block(amount)

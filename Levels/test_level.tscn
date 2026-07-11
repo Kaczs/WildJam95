@@ -2,7 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://duy0gepl1ba80" path="res://Scenes/Cards/Base/card.tscn" id="1_ormqy"]
 [ext_resource type="Texture2D" uid="uid://b1xyg2korx4vk" path="res://Scenes/Enemy/SlimePortrait.png" id="2_00vsl"]
-[ext_resource type="Script" uid="uid://n6lwa11h47vx" path="res://Scenes/combatant.gd" id="2_4k50d"]
+[ext_resource type="Script" uid="uid://n6lwa11h47vx" path="res://Scenes/Enemy/combatant.gd" id="2_4k50d"]
+[ext_resource type="Resource" uid="uid://bc2eqa4r8m6r" path="res://Resources/CardData/block.tres" id="2_i4ak4"]
 
 [node name="TestLevel" type="Node2D" unique_id=510700135]
 
@@ -25,6 +26,7 @@ layout_mode = 2
 
 [node name="Card2" parent="Hand" unique_id=1765433161 instance=ExtResource("1_ormqy")]
 layout_mode = 2
+data = ExtResource("2_i4ak4")
 
 [node name="Badguy" type="Control" parent="." unique_id=1634881578 groups=["test_badguy"]]
 layout_mode = 3
