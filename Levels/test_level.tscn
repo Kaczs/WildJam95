@@ -29,10 +29,10 @@ layout_mode = 2
 [node name="Badguy" type="Control" parent="." unique_id=1634881578 groups=["test_badguy"]]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 516.0
-offset_top = 18.0
-offset_right = 556.0
-offset_bottom = 58.0
+offset_left = 791.0
+offset_top = 36.0
+offset_right = 831.0
+offset_bottom = 76.0
 script = ExtResource("2_4k50d")
 spawn_slot = 1
 
@@ -57,6 +57,44 @@ text = "Intent: Attack 30
 horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Badguy" unique_id=757031959]
+layout_mode = 0
+offset_left = -41.0
+offset_top = -17.0
+offset_right = 81.0
+offset_bottom = 105.0
+texture = ExtResource("2_00vsl")
+
+[node name="Badguy2" type="Control" parent="." unique_id=2089300749 groups=["test_badguy"]]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 299.0
+offset_top = 22.0
+offset_right = 339.0
+offset_bottom = 62.0
+script = ExtResource("2_4k50d")
+spawn_slot = 1
+
+[node name="Health" type="RichTextLabel" parent="Badguy2" unique_id=1818273342]
+layout_mode = 0
+offset_left = -43.0
+offset_top = 106.0
+offset_right = 84.0
+offset_bottom = 151.0
+theme_override_font_sizes/normal_font_size = 32
+text = "100/100"
+
+[node name="Intent" type="RichTextLabel" parent="Badguy2" unique_id=1428783103]
+layout_mode = 0
+offset_left = -73.0
+offset_top = 165.0
+offset_right = 112.0
+offset_bottom = 264.0
+theme_override_font_sizes/normal_font_size = 32
+text = "Intent: Attack 30
+"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Badguy2" unique_id=473472274]
 layout_mode = 0
 offset_left = -41.0
 offset_top = -17.0

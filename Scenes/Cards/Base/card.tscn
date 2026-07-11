@@ -57,5 +57,6 @@ modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 117.0
 offset_bottom = 175.0
+mouse_behavior_recursive = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
