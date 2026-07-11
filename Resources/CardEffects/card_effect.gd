@@ -1,5 +1,5 @@
 class_name CardEffect
 extends Resource
 
-func doEffect():
+func doEffect(context:CombatContext):
 	pass
