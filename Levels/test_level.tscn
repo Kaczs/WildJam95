@@ -36,7 +36,6 @@ offset_top = 36.0
 offset_right = 831.0
 offset_bottom = 76.0
 script = ExtResource("2_4k50d")
-spawn_slot = 1
 
 [node name="Health" type="RichTextLabel" parent="Badguy" unique_id=1699085778]
 layout_mode = 0
@@ -74,7 +73,6 @@ offset_top = 22.0
 offset_right = 339.0
 offset_bottom = 62.0
 script = ExtResource("2_4k50d")
-spawn_slot = 1
 
 [node name="Health" type="RichTextLabel" parent="Badguy2" unique_id=1818273342]
 layout_mode = 0

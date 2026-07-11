@@ -12,5 +12,6 @@ metadata/_custom_type_script = "uid://ddafxlm8ucuh0"
 [resource]
 script = ExtResource("2_e5bx3")
 card_name = "Strike"
+description = "Attack 5"
 effects = Array[ExtResource("1_oj4x2")]([SubResource("Resource_dvxcm")])
 metadata/_custom_type_script = "uid://1beqopmi4iiq"

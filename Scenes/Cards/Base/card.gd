@@ -11,7 +11,12 @@ func _ready() -> void:
 	if name_text == null:
 		push_error("Card without a name Rich Text Label")
 		return
+	var description_text:RichTextLabel = get_node_or_null("Description")
+	if description_text == null:
+		push_error("Card without a description Rich Text Label")
+		return
 	name_text.text = data.card_name
+	description_text.text = data.description
 	test_enemy = get_tree().get_first_node_in_group("test_badguy") as Combatant
 
 
