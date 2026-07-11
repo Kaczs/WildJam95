@@ -10,6 +10,7 @@ extends Control
 var current_health:int
 var block:int # The amount of damage to be blocked
 
+
 func _ready() -> void:
 	current_health = max_health
 
