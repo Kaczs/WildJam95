@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://duy0gepl1ba80" path="res://Scenes/Cards/Base/card.tscn" id="1_ormqy"]
 [ext_resource type="Texture2D" uid="uid://b1xyg2korx4vk" path="res://Scenes/Enemy/SlimePortrait.png" id="2_00vsl"]
+[ext_resource type="Script" uid="uid://n6lwa11h47vx" path="res://Scenes/combatant.gd" id="2_4k50d"]
 
 [node name="TestLevel" type="Node2D" unique_id=510700135]
 
@@ -22,22 +23,18 @@ theme_override_constants/separation = 130
 [node name="Card" parent="Hand" unique_id=415577316 instance=ExtResource("1_ormqy")]
 layout_mode = 2
 
-[node name="Card2" parent="Hand" unique_id=23694565 instance=ExtResource("1_ormqy")]
+[node name="Card2" parent="Hand" unique_id=1765433161 instance=ExtResource("1_ormqy")]
 layout_mode = 2
 
-[node name="Card3" parent="Hand" unique_id=147433238 instance=ExtResource("1_ormqy")]
-layout_mode = 2
-
-[node name="Card4" parent="Hand" unique_id=1300232214 instance=ExtResource("1_ormqy")]
-layout_mode = 2
-
-[node name="Badguy" type="Control" parent="." unique_id=1634881578]
+[node name="Badguy" type="Control" parent="." unique_id=1634881578 groups=["test_badguy"]]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 516.0
 offset_top = 18.0
 offset_right = 556.0
 offset_bottom = 58.0
+script = ExtResource("2_4k50d")
+spawn_slot = 1
 
 [node name="Health" type="RichTextLabel" parent="Badguy" unique_id=1699085778]
 layout_mode = 0
