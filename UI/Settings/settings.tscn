@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://d4m7rbp05e81j"]
 
+[ext_resource type="Theme" uid="uid://d3l86m08ywvcq" path="res://UI/ui_main.tres" id="1_6ukun"]
 [ext_resource type="PackedScene" uid="uid://e6q06jshe80m" path="res://UI/Settings/KeyBinds/key_binds.tscn" id="1_cdu2u"]
 [ext_resource type="PackedScene" uid="uid://dlveotugasnjn" path="res://UI/Settings/Audio/audio.tscn" id="2_qeycx"]
 
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_6ukun")
 current_tab = 0
 tab_0/title = "Key Binds"
 

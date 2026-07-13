@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dgrb0gfcdbukx"]
 
 [ext_resource type="Script" uid="uid://kf6s6ldctduc" path="res://UI/main_menu.gd" id="1_p8ccj"]
+[ext_resource type="Theme" uid="uid://d3l86m08ywvcq" path="res://UI/ui_main.tres" id="2_d8nwk"]
 [ext_resource type="PackedScene" uid="uid://d4m7rbp05e81j" path="res://UI/Settings/settings.tscn" id="2_tk8dj"]
 
 [node name="MainMenu" type="Control" unique_id=1281029461]
@@ -21,27 +22,31 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MainMenu" type="VBoxContainer" parent="CenterContainer" unique_id=696254151]
+visible = false
 layout_mode = 2
 
 [node name="Play" type="Button" parent="CenterContainer/MainMenu" unique_id=403459001]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
+theme = ExtResource("2_d8nwk")
 text = "Play"
 
 [node name="Settings" type="Button" parent="CenterContainer/MainMenu" unique_id=298822892]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
+theme = ExtResource("2_d8nwk")
 text = "Settings"
 
 [node name="Exit" type="Button" parent="CenterContainer/MainMenu" unique_id=44925777]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
+theme = ExtResource("2_d8nwk")
 text = "Exit"
 
 [node name="Settings" parent="CenterContainer" unique_id=1794996779 instance=ExtResource("2_tk8dj")]
-visible = false
 custom_minimum_size = Vector2(1000, 500)
 layout_mode = 2
+current_tab = 1
 
 [connection signal="pressed" from="CenterContainer/MainMenu/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CenterContainer/MainMenu/Settings" to="." method="_on_settings_pressed"]

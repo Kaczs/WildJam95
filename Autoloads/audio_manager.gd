@@ -55,6 +55,7 @@ var music_playback:AudioStreamPlaybackInteractive
 func _ready() -> void:
 	music_player = AudioStreamPlayer.new()
 	self.add_child(music_player)
+	music_player.set_bus("Music")
 	music_player.set_stream(MUSIC_LIST)
 	music_player.play()
 	music_playback = music_player.get_stream_playback()
